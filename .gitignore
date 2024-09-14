@@ -28,3 +28,7 @@ build
 hs_err_pid*
 replay_pid*
 
+*.sqlite
+*.db
+*.sql
+

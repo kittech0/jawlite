@@ -3,8 +3,16 @@
  */
 package io.github.kittech0.jawlite;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
 public class Library {
-    public boolean someLibraryMethod() {
-        return true;
+    static {
+        try {
+            Connection connection = DriverManager.getConnection("jdbc:sqlite:jawlite.db");
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
